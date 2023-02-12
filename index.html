@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  </head>
+  <body>
+    <div class="todoList-container">
+      <div class="todoList-name">Список дел</div>
+      <div class="todoList-header">Задание:</div>
+      <div class="todoList-main">
+        <div class="log-message" id="message-container"></div>
+        <div class="main-container">
+          <div class="input-container">
+            <div class="task-input">
+              <div>Название задания</div>
+              <input type="text" id="task-name-input" class="task-input-style"/>
+            </div>
+            <div class="task-input">
+              <div>Текст задания</div>
+              <input type="text" id="task-text-input" class="task-input-style"/>
+            </div>
+          </div>
+          <div class="buttons">
+            <div class="submit-button" id="submit-task" onclick="submitTask()">
+              Добавить
+            </div>
+            <select class="list-select" id="list-select" onchange="selectList()">
+              <option value="0">Все</option>
+              <option value="1">Не начаты</option>
+              <option value="2">В работе</option>
+              <option value="3">Готовы</option>
+            </select>
+          </div>
+        </div>
+        <div class="list-container" id="list-container">
+          <div class="empty-list">Нет заданий!</div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="js/wow.min.js"></script>
+              <script>new WOW().init();</script>
+  </body>
+</html>
